@@ -7,7 +7,7 @@ import {
 
 import { useSearchParams } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Select } from "./ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "./ui/select";
 
 interface PaginationProps {
   pages: number;
@@ -64,7 +64,14 @@ export function Pagination({ items, page, pages }: PaginationProps) {
       <div className="flex items-center gap-8">
         <div className="flex items-center gap-2">
           <span>Rows per page</span>
-          <Select />
+          <Select defaultValue="10">
+            <SelectTrigger aria-label="Page" />
+            <SelectContent>
+              <SelectItem value="10">10</SelectItem>
+              <SelectItem value="20">20</SelectItem>
+              <SelectItem value="50">50</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
 
         <span>
