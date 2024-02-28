@@ -64,6 +64,7 @@ export function Pagination({ items, page, pages }: PaginationProps) {
       <div className="flex items-center gap-8">
         <div className="flex items-center gap-2">
           <span>Rows per page</span>
+
           <Select defaultValue="10">
             <SelectTrigger aria-label="Page" />
             <SelectContent>
